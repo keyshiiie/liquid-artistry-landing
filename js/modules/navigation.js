@@ -24,11 +24,60 @@ export class Navigation {
     
     setupBurgerMenu() {
         const burger = document.querySelector('.burger-menu');
-        if (burger) {
-            burger.addEventListener('click', () => {
-                // Add mobile menu toggle logic here when needed
-                console.log('Menu toggled');
+        const overlay = document.getElementById('burgerOverlay');
+        const links = document.querySelectorAll('.burger-nav__link');
+        
+        if (!burger || !overlay) return;
+        
+        // Открытие/закрытие по клику на бургер
+        burger.addEventListener('click', () => {
+            const isActive = overlay.classList.contains('active');
+            if (isActive) {
+                this.closeMenu();
+            } else {
+                this.openMenu();
+            }
+        });
+        
+        // Закрытие по клику на ссылку
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                this.closeMenu();
             });
-        }
+        });
+        
+        // Закрытие по клику на оверлей (только на пустое место)
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) {
+                this.closeMenu();
+            }
+        });
+        
+        // Закрытие по Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && overlay.classList.contains('active')) {
+                this.closeMenu();
+            }
+        });
+    }
+    
+    openMenu() {
+        const overlay = document.getElementById('burgerOverlay');
+        const burger = document.querySelector('.burger-menu');
+        if (!overlay) return;
+        
+        overlay.classList.add('active');
+        burger.classList.add('active');
+        document.body.classList.add('no-scroll');
+    }
+    
+    closeMenu() {
+        const overlay = document.getElementById('burgerOverlay');
+        const burger = document.querySelector('.burger-menu');
+        if (!overlay) return;
+        
+        overlay.classList.remove('active');
+        burger.classList.remove('active');
+        document.body.classList.remove('no-scroll');
     }
 }

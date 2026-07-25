@@ -38,11 +38,9 @@
     }
 
     .decor-cross {
-        max-width: 500px;
     }
 
     .decor-a {
-        width: 200px;
     }
 
     .menu-card__inner {
@@ -66,9 +64,7 @@
    ============================================ */
 @media (max-width: 767px) {
     .hero__row {
-        padding: 30px 20px 60px;
-        align-items: center;
-        text-align: center;
+        padding: 180px 0px 60px;
     }
 
     .hero__title {
@@ -77,44 +73,74 @@
     }
 
     .hero__description {
-        font-size: 16px;
+        font-size: 18px;
         max-width: 100%;
     }
 
     .hero__button {
-        margin-top: 40px;
+        margin-top: 65px;
         padding: 10px 32px;
+    }
+
+    .main {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .decor-main:first-of-type {
+        height: 76px;
+        width: auto;
+        top: 35%;
+        left: 79%;
+    }
+
+    .decor-main:last-of-type {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: auto;
+        height: auto;
+        transform: scale(0.7) translateX(10%) translateY(-30%);
+        max-width: none;
+        max-height: none;
+        right: -40%;
+        z-index: 2;
     }
 
     .about-us {
         padding: 40px 0;
     }
 
+    .about-us__row {
+        padding: 0 30px;
+    }
+
+
     .about-us__content {
-        margin-left: 20px;
-        margin-top: 30px;
-        padding: 0 10px 10px;
+        margin: 0;
+        padding: 0 10px;
         max-width: 100%;
     }
 
     .about-us__title {
-        font-size: 22px;
+        font-size: 30px;
     }
 
     .about-us__description {
-        font-size: 14px;
+        font-size: 16px;
     }
 
-    .decor-a {
-        display: none;
+    .decor-a { 
+        top: 20%;
     }
 
     .gallery {
+        padding-top: 115px;
         grid-template-columns: 1fr;
     }
 
     .schedule {
-        padding: 40px 0;
+        padding: 100px 0;
     }
 
     .section__title {
@@ -156,14 +182,14 @@
 
     .menu-card__inner {
         flex-direction: column;
-        max-width: 100%;
+        max-width: 90%;
         gap: 15px;
         padding: 0 10px;
     }
 
     .menu-card__img {
-        max-width: 100%;
-        max-height: 200px;
+        max-width: 200px;
+        max-height: 100%;
         width: 100%;
         object-fit: cover;
     }
@@ -188,7 +214,9 @@
     }
 
     .decor-cross {
-        display: none;
+        top: 37%;
+        right: 0;
+        max-height: 550px;
     }
 
     .booking {
@@ -198,6 +226,13 @@
 
     .booking__row {
         align-items: center;
+    }
+
+    .booking__content {
+        margin-left: auto;
+        margin-right: 0;
+        width: 100%;
+        max-width: 100%;
     }
 
     .booking__form-wrapper {
@@ -254,7 +289,6 @@
     }
 
     .footer::before {
-        opacity: 0.3;
     }
 }
 
@@ -263,11 +297,11 @@
    ============================================ */
 @media (max-width: 480px) {
     .hero__title {
-        font-size: 36px;
+        font-size: 84px;
     }
 
     .about-us__title {
-        font-size: 20px;
+        font-size: 30px;
     }
 
     .section__title {
@@ -319,3 +353,4 @@
         max-width: 500px;
     }
 }
+

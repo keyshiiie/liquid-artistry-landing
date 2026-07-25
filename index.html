@@ -28,11 +28,51 @@
                         <p class="logo__text">Liquid Maestro</p>
                     </div>
                     <button class="burger-menu" aria-label="Toggle menu">
-                        <img src="img/Hamburger-menu.png" alt="menu">
+                        <!-- Иконка бургера (по умолчанию) -->
+                        <img src="img/Hamburger-menu.png" alt="menu" class="burger-icon">
+                        <!-- Крестик (скрыт по умолчанию) -->
+                        <svg class="burger-close-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" style="display: none;">
+                            <path d="M18 6L6 18M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
                     </button>
                 </div>
             </div>
         </header>
+        <!-- Burger Menu Overlay -->
+        <div class="burger-overlay" id="burgerOverlay">
+            <div class="burger-menu-panel">
+                <nav class="burger-nav">
+                    <ul class="burger-nav__list">
+                        <li class="burger-nav__item">
+                            <a href="#about" class="burger-nav__link" data-target="about">
+                                About us
+                            </a>
+                        </li>
+                        <li class="burger-nav__item">
+                            <a href="#schedule" class="burger-nav__link" data-target="schedule">
+                                Opening Hours
+                            </a>
+                        </li>
+                        <li class="burger-nav__item">
+                            <a href="#menu" class="burger-nav__link" data-target="menu">
+                                Cocktails Menu
+                            </a>
+                        </li>
+                        <li class="burger-nav__item">
+                            <a href="#booking" class="burger-nav__link" data-target="booking">
+                                Bookings & Contact
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="burger-footer">
+                    <p class="burger-hours">Mon - Thu: 5 PM - 12 AM</p>
+                    <p class="burger-hours">Fri - Sat: 5 PM - 2 AM</p>
+                    <p class="burger-hours burger-hours--closed">Sun: Closed</p>
+                </div>
+            </div>
+        </div>
 
         <!-- Hero -->
         <section class="hero">
@@ -54,7 +94,7 @@
     </main>
 
     <!-- About Us -->
-    <section class="about-us">
+    <section class="about-us" id="about">
         <img src="img/decor-a.svg" alt="" class="decor-a">
         <div class="container">
             <div class="about-us__row">
@@ -84,7 +124,7 @@
             <img src="img/gallery-2.png" alt="Cocktail">
         </section>
 
-        <section class="schedule">
+        <section class="schedule" id="schedule">
             <div class="container">
                 <div class="schedule__row">
                     <h3 class="section__title"><b>Opening</b> Hours</h3>
@@ -166,22 +206,74 @@
                             
                             <div class="booking__form-group">
                                 <label for="people" class="booking__label">Number of people</label>
-                                <select id="people" class="booking__select" required>
-                                    <option value="" selected disabled>Select number</option>
-                                    <option value="1">1 person</option>
-                                    <option value="2">2 people</option>
-                                    <option value="3">3 people</option>
-                                    <option value="4">4 people</option>
-                                    <option value="5">5 people</option>
-                                    <option value="6">6+ people</option>
-                                </select>
+                                <div class="custom-select-wrapper">
+                                    <input type="text" 
+                                        id="peopleDisplay" 
+                                        class="booking__input custom-select-input" 
+                                        placeholder="Select number" 
+                                        readonly>
+                                    <div class="custom-select-dropdown" style="display: none;">
+                                        <div class="select-option" data-value="1">1 person</div>
+                                        <div class="select-option" data-value="2">2 people</div>
+                                        <div class="select-option" data-value="3">3 people</div>
+                                        <div class="select-option" data-value="4">4 people</div>
+                                        <div class="select-option" data-value="5">5 people</div>
+                                        <div class="select-option" data-value="6">6+ people</div>
+                                    </div>
+                                </div>
                             </div>
                             
                             <div class="booking__form-group">
                                 <label for="date" class="booking__label">Date & Time</label>
                                 <div class="booking__datetime">
-                                    <input type="date" id="date" class="booking__input booking__input--half" required>
-                                    <input type="time" id="time" class="booking__input booking__input--half" required>
+                                    <!-- Кастомный Date Picker -->
+                                    <div class="custom-date-wrapper">
+                                        <input type="text" 
+                                            id="dateDisplay" 
+                                            class="booking__input booking__input--half" 
+                                            placeholder="Select date" 
+                                            readonly>
+                                        <div class="custom-date-picker" style="display: none;">
+                                            <div class="picker-header">
+                                                <button class="picker-nav" data-action="prev-month">‹</button>
+                                                <span class="picker-month-year"></span>
+                                                <button class="picker-nav" data-action="next-month">›</button>
+                                            </div>
+                                            <div class="picker-weekdays">
+                                                <span>Mon</span><span>Tue</span><span>Wed</span>
+                                                <span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+                                            </div>
+                                            <div class="picker-days"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Кастомный Time Picker -->
+                                    <div class="custom-time-wrapper">
+                                        <input type="text" 
+                                            id="timeDisplay" 
+                                            class="booking__input booking__input--half" 
+                                            placeholder="Select time" 
+                                            readonly>
+                                        <div class="custom-time-picker" style="display: none;">
+                                            <div class="time-picker-list">
+                                                <div class="time-option">5:00 PM</div>
+                                                <div class="time-option">5:30 PM</div>
+                                                <div class="time-option">6:00 PM</div>
+                                                <div class="time-option">6:30 PM</div>
+                                                <div class="time-option">7:00 PM</div>
+                                                <div class="time-option">7:30 PM</div>
+                                                <div class="time-option">8:00 PM</div>
+                                                <div class="time-option">8:30 PM</div>
+                                                <div class="time-option">9:00 PM</div>
+                                                <div class="time-option">9:30 PM</div>
+                                                <div class="time-option">10:00 PM</div>
+                                                <div class="time-option">10:30 PM</div>
+                                                <div class="time-option">11:00 PM</div>
+                                                <div class="time-option">11:30 PM</div>
+                                                <div class="time-option">12:00 AM</div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             
