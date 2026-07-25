@@ -73,9 +73,6 @@
         margin-top: 100px;
     }
 
-    .decor-a {
-    }
-
     .decor-booking {
         display: none;
     }
@@ -93,6 +90,15 @@
     .footer {
         min-height: auto;
         padding: 40px 0;
+    }
+
+    .burger-menu-panel {
+        padding: 20px;
+        width: 33.333%;
+    }
+    
+    .burger-overlay.active .burger-menu-panel {
+        right: 0;
     }
 }
 
@@ -300,7 +306,28 @@
         margin-top: 30px;
     }
 
-    .footer::before {
+    .burger-menu-panel {
+        width: 80%;
+        right: -80%;
+        padding: 50px 20px 30px;
+    }
+    
+    .burger-overlay.active .burger-menu-panel {
+        right: 0;
+    }
+    
+    .burger-nav__link {
+        font-size: 16px;
+        padding: 14px 16px;
+    }
+    
+    .burger-nav__icon {
+        font-size: 20px;
+        width: 28px;
+    }
+    
+    .burger-hours {
+        font-size: 13px;
     }
 }
 
@@ -345,24 +372,25 @@
         width: 16px;
         height: 16px;
     }
+
+    .burger-menu-panel {
+        width: 85%;
+        right: -85%;
+        padding: 40px 16px 24px;
+    }
+    
+    .burger-overlay.active .burger-menu-panel {
+        right: 0;
+    }
+    
+    .burger-nav__link {
+        font-size: 15px;
+        padding: 12px 14px;
+        gap: 12px;
+    }
+    
+    .burger-nav__icon {
+        font-size: 18px;
+        width: 24px;
+    }
 }
-
-/* ============================================
-   LARGE SCREENS (1400px+)
-   ============================================ */
-@media (min-width: 1400px) {
-    .container {
-        max-width: 1440px;
-        padding: 0 40px;
-    }
-
-    .hero__row {
-        padding: 100px 200px 120px;
-    }
-
-    .hero__title {
-        font-size: 120px;
-        max-width: 500px;
-    }
-}
-

@@ -1,6 +1,12 @@
 /* ============================================
    BASE STYLES
    ============================================ */
+
+img {
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
 body {
     font-family: "Noto Serif Display", serif;
     font-optical-sizing: auto;
@@ -31,17 +37,16 @@ body {
 
 .decor-main:first-of-type {
     position: absolute;
-    top: 24%;
-    left: 47%;
+    top: 22%;
+    left: 45%;
 }
 
 .decor-main:last-of-type {
     position: absolute;
     width: 100%;
-    top: -17.4%;
+    top: -25.7%;
     right: 0;
 }
-
 
 .main::before {
     content: '';

@@ -72,7 +72,7 @@
 }
 
 .menu-card__title {
-    max-width: 240px;
+    max-width: 250px;
     font-size: 42px;
     font-weight: 400;
 }
@@ -465,69 +465,4 @@ body.no-scroll {
     overflow: hidden;
 }
 
-/* ============================================
-   BURGER - АДАПТИВ
-   ============================================ */
 
-/* Планшеты (768px - 1024px) */
-@media (max-width: 1024px) {
-    .burger-menu-panel {
-        width: 40%;
-        right: -40%;
-    }
-    
-    .burger-overlay.active .burger-menu-panel {
-        right: 0;
-    }
-}
-
-/* Мобильные (320px - 767px) */
-@media (max-width: 767px) {
-    .burger-menu-panel {
-        width: 80%;
-        right: -80%;
-        padding: 50px 20px 30px;
-    }
-    
-    .burger-overlay.active .burger-menu-panel {
-        right: 0;
-    }
-    
-    .burger-nav__link {
-        font-size: 16px;
-        padding: 14px 16px;
-    }
-    
-    .burger-nav__icon {
-        font-size: 20px;
-        width: 28px;
-    }
-    
-    .burger-hours {
-        font-size: 13px;
-    }
-}
-
-/* Очень маленькие экраны (320px - 480px) */
-@media (max-width: 480px) {
-    .burger-menu-panel {
-        width: 85%;
-        right: -85%;
-        padding: 40px 16px 24px;
-    }
-    
-    .burger-overlay.active .burger-menu-panel {
-        right: 0;
-    }
-    
-    .burger-nav__link {
-        font-size: 15px;
-        padding: 12px 14px;
-        gap: 12px;
-    }
-    
-    .burger-nav__icon {
-        font-size: 18px;
-        width: 24px;
-    }
-}
