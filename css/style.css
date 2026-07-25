@@ -1,3 +1,6 @@
+/* ============================================
+   BASE STYLES
+   ============================================ */
 body {
     font-family: "Noto Serif Display", serif;
     font-optical-sizing: auto;
@@ -15,12 +18,30 @@ body {
     padding: 0 20px;
 }
 
+/* ============================================
+   HERO SECTION
+   ============================================ */
 .main {
     position: relative;
     min-height: 100vh;
     color: #ffffff;
     z-index: 1;
+    position: relative;
 }
+
+.decor-main:first-of-type {
+    position: absolute;
+    top: 24%;
+    left: 47%;
+}
+
+.decor-main:last-of-type {
+    position: absolute;
+    width: 100%;
+    top: -5.2%;
+    right: 0;
+}
+
 
 .main::before {
     content: '';
@@ -29,7 +50,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('img/Background-image.png');
+    background-image: url('../img/Background-image.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -77,7 +98,7 @@ body {
     position: relative;
 }
 
-.hero__sybtitle {
+.hero__subtitle {
     font-family: 'Montserrat', serif;
     font-weight: 600;
 }
@@ -114,6 +135,9 @@ body {
     color: #000000;
 }
 
+/* ============================================
+   ABOUT US
+   ============================================ */
 .about-us {
     background-color: #181818;
     padding: 80px 0;
@@ -172,6 +196,9 @@ body {
     pointer-events: none;
 }
 
+/* ============================================
+   GALLERY
+   ============================================ */
 .gallery {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -186,6 +213,9 @@ body {
     object-fit: cover;
 }
 
+/* ============================================
+   SCHEDULE
+   ============================================ */
 .schedule {
     background-color: #181818;
     padding: 80px 0;
@@ -240,158 +270,13 @@ body {
     font-weight: 600;
 }
 
-.menu {
-    background-color: #181818;
-    padding: 80px 0;
-    position: relative;
+.hours__time--closed {
+    color: #D16868;
 }
 
-.menu__row {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-}
-
-.menu .section__title {
-    margin-bottom: 55px;
-    text-align: left;
-}
-
-.slider-wrapper {
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.slider-container {
-    overflow: hidden;
-    width: 100%;
-    flex: 1;
-}
-
-.slider {
-    display: flex;
-    transition: transform 0.5s ease;
-    width: 100%;
-}
-
-.menu-card {
-    flex: 0 0 100%;
-    box-sizing: border-box;
-}
-
-.menu-card__inner {
-    display: flex;
-    align-items: center;
-    max-width: 550px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.menu-card__content {
-    position: absolute;
-    top: 135px;
-    left: 100px;
-}
-
-.menu-card__text {
-    display: flex;
-    align-items: start;
-}
-
-.menu-card__category {
-    font-family: 'Montserrat', serif;
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-}
-
-.menu-card__title {
-    max-width: 240px;
-    font-size: 42px;
-    font-weight: 400;
-}
-
-.menu-card__title b {
-    font-weight: 700;
-}
-
-.menu-card__description {
-    margin-top: 20px;
-    font-family: 'Montserrat', serif;
-    font-size: 12px;
-    font-weight: 400;
-    max-width: 210px;
-}
-
-.menu-card__description b {
-    font-weight: 600;
-}
-
-.slider-btn {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: #ffffff;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    z-index: 2;
-}
-
-.slider-btn:hover {
-    background: rgba(215, 104, 104, 0.3);
-    border-color: #D16868;
-}
-
-.slider-btn:disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
-}
-
-.slider-btn svg {
-    width: 20px;
-    height: 20px;
-}
-
-.slider-dots {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 30px;
-    width: 100%;
-}
-
-.slider-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    padding: 0;
-}
-
-.slider-dot.active {
-    background: #D16868;
-    width: 30px;
-    border-radius: 5px;
-}
-
-.slider-dot:hover {
-    background: rgba(255, 255, 255, 0.4);
-}
-
+/* ============================================
+   DECORATIONS
+   ============================================ */
 .decor-wrapper {
     position: relative;
 }
@@ -416,6 +301,9 @@ body {
     pointer-events: none;
 }
 
+/* ============================================
+   BOOKING
+   ============================================ */
 .booking {
     margin-top: 250px;
     background-color: #181818;
@@ -434,128 +322,29 @@ body {
 .booking__row {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: start;
     width: 100%;
 }
 
-.booking__form-wrapper {
+/* Обертка для формы и контактов */
+.booking__content {
+    margin-left: auto;
+    margin-right: 120px;
     width: 50%;
     max-width: 50%;
-    margin-right: 130px;
+}
+
+.booking__form-wrapper {
+    width: 100%;
 }
 
 .booking__form-wrapper .section__title {
     margin-bottom: 60px;
 }
 
-.booking__form {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    width: 100%;
-}
-
-.booking__form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    width: 100%;
-}
-
-.booking__label {
-    font-family: 'Montserrat', serif;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.booking__input,
-.booking__select {
-    padding-bottom: 5px;
-    background: transparent;
-    border: none;
-    border-bottom: 0.4px solid #ffffff;
-    border-radius: 0;
-    font-size: 21px;
-    font-family: 'Montserrat', serif;
-    transition: all 0.3s ease;
-    width: 100%;
-    box-sizing: border-box;
-    outline: none;
-    color: #ffffff;
-}
-
-.booking__input:focus,
-.booking__select:focus {
-    border-bottom-color: #D16868;
-    background: transparent;
-}
-
-.booking__input::placeholder {
-    color: #ffffff;
-    opacity: 0.15;
-}
-
-.booking__input[type="date"]::-webkit-calendar-picker-indicator,
-.booking__input[type="time"]::-webkit-calendar-picker-indicator {
-    filter: invert(1);
-    opacity: 0.6;
-    cursor: pointer;
-}
-
-.booking__input[type="date"]::-webkit-calendar-picker-indicator:hover,
-.booking__input[type="time"]::-webkit-calendar-picker-indicator:hover {
-    opacity: 1;
-}
-
-.booking__datetime {
-    display: flex;
-    gap: 12px;
-    width: 100%;
-}
-
-.booking__datetime .booking__input {
-    flex: 1;
-    width: 100%;
-}
-
-.booking__select {
-    appearance: none;
-    -webkit-appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(255,255,255,0.5)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 0 center;
-    padding-right: 30px;
-    cursor: pointer;
-}
-
-.booking__select option {
-    background: #181818;
-    color: #ffffff;
-}
-
-.booking__submit {
-    padding: 16px 40px;
-    background: transparent;
-    border: 1px solid #ffffff;
-    font-size: 16px;
-    font-weight: 900;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 35px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.booking__submit:hover {
-    background: #ffffff;
-    color: #000000;
-}
-
 .booking__contact {
-    width: 30%;
-    max-width: 30%;
-    margin-right: 385px;
+    width: 60%;
+    max-width: 60%;
     margin-top: 40px;
 }
 
@@ -565,7 +354,6 @@ body {
     gap: 10px;
     margin-bottom: 30px;
 }
-
 
 .booking__contact-label {
     font-family: 'Montserrat', serif;
@@ -579,11 +367,29 @@ body {
     font-weight: 400;
 }
 
+/* ============================================
+   FOOTER
+   ============================================ */
 .footer {
     position: relative;
-    height: 100%;
+    padding: 30px 0; /* ← фиксированные отступы сверху/снизу */
     z-index: 1;
-    padding: 32px 0;
+    overflow: hidden; /* чтобы фон не вылезал */
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../img/footer.png');
+    background-size: cover;
+    background-position: center; /* ← центрируем фон */
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    z-index: -1;
 }
 
 .footer__row {
@@ -591,6 +397,8 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 .footer__social {
@@ -598,8 +406,16 @@ body {
     align-items: center;
     justify-content: flex-end;
     gap: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 130px;
     width: 100%;
+}
+
+.social-link {
+    transition: opacity 0.3s ease;
+}
+
+.social-link:hover {
+    opacity: 0.7;
 }
 
 .footer__logo {
@@ -610,26 +426,37 @@ body {
     width: 100%;
 }
 
-.footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('img/footer.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.7;
-    z-index: -1;
-}
-
-
 .footer__afterword {
     max-width: 230px;
     font-weight: 500;
     font-size: 12px;
     margin-top: 17px;
     text-align: center;
+}
+
+.footer__copyright {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* ← добавил, чтобы правильно растягивалось */
+    align-items: center;
+}
+
+.copyright-link,
+.design-author-link {
+    color: #ffffff;
+    font-family: 'Montserrat', serif;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.copyright-link:hover,
+.design-author-link:hover {
+    color: #D16868;
+}
+
+.design-author-link span {
+    text-decoration: underline;
+    font-weight: 700;
 }

@@ -1,0 +1,291 @@
+/* ============================================
+   MENU SLIDER COMPONENTS
+   ============================================ */
+.menu {
+    background-color: #181818;
+    padding: 80px 0;
+    position: relative;
+}
+
+.menu__row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.menu .section__title {
+    margin-bottom: 55px;
+    text-align: left;
+}
+
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.slider-container {
+    overflow: hidden;
+    width: 100%;
+    flex: 1;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.menu-card {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+}
+
+.menu-card__img {
+    max-width: auto;
+    max-height: 320px;
+}
+
+.menu-card__inner {
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.menu-card__text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.menu-card__category {
+    font-family: 'Montserrat', serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.menu-card__title {
+    max-width: 240px;
+    font-size: 42px;
+    font-weight: 400;
+}
+
+.menu-card__title b {
+    font-weight: 700;
+}
+
+.menu-card__description {
+    margin-top: 20px;
+    font-family: 'Montserrat', serif;
+    font-size: 12px;
+    font-weight: 400;
+    max-width: 340px;
+}
+
+.menu-card__description b {
+    font-weight: 600;
+}
+
+.slider-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    z-index: 2;
+}
+
+.slider-btn:hover {
+    background: rgba(215, 104, 104, 0.3);
+    border-color: #D16868;
+}
+
+.slider-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.slider-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.slider-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.slider-dot.active {
+    background: #D16868;
+    width: 30px;
+    border-radius: 5px;
+}
+
+.slider-dot:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* ============================================
+   BOOKING FORM COMPONENTS
+   ============================================ */
+.booking__form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+}
+
+.booking__form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+}
+
+.booking__label {
+    font-family: 'Montserrat', serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.booking__input,
+.booking__select {
+    padding-bottom: 5px;
+    background: transparent;
+    border: none;
+    border-bottom: 0.4px solid #ffffff;
+    border-radius: 0;
+    font-size: 21px;
+    font-family: 'Montserrat', serif;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    color: #ffffff;
+}
+
+.booking__input::placeholder {
+    color: #ffffff;
+    opacity: 0.15;
+}
+
+.booking__select:invalid {
+    color: rgba(255, 255, 255, 0.15);
+}
+
+.booking__select option:first-child {
+    color: rgba(255, 255, 255, 0.15);
+}
+
+.booking__select option {
+    background: #181818;
+    color: #ffffff;
+}
+
+.booking__select option:not(:first-child) {
+    color: #ffffff;
+}
+
+.booking__input[type="date"]:not(:valid),
+.booking__input[type="time"]:not(:valid) {
+    color: rgba(255, 255, 255, 0.15);
+}
+
+.booking__input[type="date"]:valid,
+.booking__input[type="time"]:valid {
+    color: #ffffff;
+}
+
+.booking__input[type="date"]::-webkit-calendar-picker-indicator,
+.booking__input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.booking__input[type="date"]::-webkit-calendar-picker-indicator:hover,
+.booking__input[type="time"]::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+}
+
+.booking__input[type="date"]::-webkit-datetime-edit,
+.booking__input[type="time"]::-webkit-datetime-edit {
+    color: rgba(255, 255, 255, 0.15);
+}
+
+.booking__input[type="date"]:valid::-webkit-datetime-edit,
+.booking__input[type="time"]:valid::-webkit-datetime-edit {
+    color: #ffffff;
+}
+
+.booking__datetime {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+.booking__datetime .booking__input {
+    flex: 1;
+    width: 100%;
+}
+
+.booking__select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(255,255,255,0.5)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0 center;
+    padding-right: 30px;
+    cursor: pointer;
+}
+
+.booking__select:-moz-ui-invalid {
+    color: rgba(255, 255, 255, 0.15);
+}
+
+.booking__submit {
+    padding: 16px 40px;
+    background: transparent;
+    border: 1px solid #ffffff;
+    font-size: 16px;
+    font-weight: 900;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 35px;
+    width: 30%;
+    box-sizing: border-box;
+}
+
+.booking__submit:hover {
+    background: #ffffff;
+    color: #000000;
+}

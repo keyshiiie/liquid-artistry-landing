@@ -1,0 +1,321 @@
+/* ============================================
+   TABLETS (768px - 1024px)
+   ============================================ */
+@media (max-width: 1024px) {
+    .hero__row {
+        padding: 50px 100px 80px;
+    }
+
+    .hero__title {
+        font-size: 72px;
+        max-width: 320px;
+    }
+
+    .about-us__content {
+        margin-left: 100px;
+        margin-top: 60px;
+        max-width: 600px;
+    }
+
+    .about-us__title {
+        font-size: 28px;
+    }
+
+    .about-us__description {
+        font-size: 16px;
+    }
+
+    .booking__form-wrapper {
+        width: 70%;
+        max-width: 70%;
+        margin-right: 80px;
+    }
+
+    .booking__contact {
+        width: 40%;
+        max-width: 40%;
+        margin-right: 80px;
+    }
+
+    .decor-cross {
+        max-width: 500px;
+    }
+
+    .decor-a {
+        width: 200px;
+    }
+
+    .menu-card__inner {
+        max-width: 500px;
+        gap: 20px;
+    }
+
+    .menu-card__title {
+        font-size: 32px;
+        max-width: 180px;
+    }
+
+    .footer {
+        min-height: auto;
+        padding: 40px 0;
+    }
+}
+
+/* ============================================
+   MOBILE (320px - 767px)
+   ============================================ */
+@media (max-width: 767px) {
+    .hero__row {
+        padding: 30px 20px 60px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero__title {
+        font-size: 48px;
+        max-width: 100%;
+    }
+
+    .hero__description {
+        font-size: 16px;
+        max-width: 100%;
+    }
+
+    .hero__button {
+        margin-top: 40px;
+        padding: 10px 32px;
+    }
+
+    .about-us {
+        padding: 40px 0;
+    }
+
+    .about-us__content {
+        margin-left: 20px;
+        margin-top: 30px;
+        padding: 0 10px 10px;
+        max-width: 100%;
+    }
+
+    .about-us__title {
+        font-size: 22px;
+    }
+
+    .about-us__description {
+        font-size: 14px;
+    }
+
+    .decor-a {
+        display: none;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .schedule {
+        padding: 40px 0;
+    }
+
+    .section__title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .hours__item {
+        font-size: 18px;
+        padding: 12px 0;
+        flex-wrap: wrap;
+    }
+
+    .menu {
+        padding: 40px 0;
+    }
+
+    .slider-wrapper {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .slider-btn {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 3;
+    }
+
+    .slider-btn--prev {
+        left: -10px;
+    }
+
+    .slider-btn--next {
+        right: -10px;
+    }
+
+    .menu-card__inner {
+        flex-direction: column;
+        max-width: 100%;
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .menu-card__img {
+        max-width: 100%;
+        max-height: 200px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .menu-card__text {
+        align-items: center;
+        text-align: center;
+    }
+
+    .menu-card__title {
+        font-size: 28px;
+        max-width: 100%;
+    }
+
+    .menu-card__description {
+        max-width: 100%;
+        font-size: 11px;
+    }
+
+    .decor-menu {
+        bottom: -80px;
+    }
+
+    .decor-cross {
+        display: none;
+    }
+
+    .booking {
+        margin-top: 120px;
+        padding: 40px 0;
+    }
+
+    .booking__row {
+        align-items: center;
+    }
+
+    .booking__form-wrapper {
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .booking__form-wrapper .section__title {
+        margin-bottom: 40px;
+    }
+
+    .booking__input,
+    .booking__select {
+        font-size: 18px;
+    }
+
+    .booking__datetime {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .booking__contact {
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0;
+        margin-top: 40px;
+    }
+
+    .booking__contact-value {
+        font-size: 18px;
+    }
+
+    .decor-booking {
+        display: none;
+    }
+
+    .footer {
+        min-height: auto;
+        padding: 30px 0;
+    }
+
+    .footer__social {
+        justify-content: center;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+    }
+
+    .footer__copyright {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .footer::before {
+        opacity: 0.3;
+    }
+}
+
+/* ============================================
+   VERY SMALL SCREENS (320px - 480px)
+   ============================================ */
+@media (max-width: 480px) {
+    .hero__title {
+        font-size: 36px;
+    }
+
+    .about-us__title {
+        font-size: 20px;
+    }
+
+    .section__title {
+        font-size: 24px;
+    }
+
+    .menu-card__title {
+        font-size: 24px;
+    }
+
+    .hours__item {
+        font-size: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .booking__submit {
+        padding: 14px 20px;
+        font-size: 14px;
+    }
+
+    .slider-btn {
+        width: 32px;
+        height: 32px;
+    }
+
+    .slider-btn svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* ============================================
+   LARGE SCREENS (1400px+)
+   ============================================ */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1440px;
+        padding: 0 40px;
+    }
+
+    .hero__row {
+        padding: 100px 200px 120px;
+    }
+
+    .hero__title {
+        font-size: 120px;
+        max-width: 500px;
+    }
+}
