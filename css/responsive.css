@@ -3,17 +3,34 @@
    ============================================ */
 @media (max-width: 1024px) {
     .hero__row {
-        padding: 50px 100px 80px;
+        padding: 150px 100px 80px;
     }
 
-    .hero__title {
-        font-size: 72px;
-        max-width: 320px;
+    .main {
+        overflow: hidden;
+    }
+
+    .decor-main:first-of-type {
+        width: auto;
+        top: 25%;
+        left: 64%;
+    }
+
+    .decor-main:last-of-type {
+        top: 0;
+        right: 0;
+        width: auto;
+        height: auto;
+        transform: translateX(-10%) translateY(-11%);
+        max-width: none;
+        max-height: none;
+        right: -40%;
+        z-index: 2;
     }
 
     .about-us__content {
-        margin-left: 100px;
-        margin-top: 60px;
+        padding: 0;
+        margin: 60px 0 0 100px;
         max-width: 600px;
     }
 
@@ -25,22 +42,42 @@
         font-size: 16px;
     }
 
-    .booking__form-wrapper {
-        width: 70%;
-        max-width: 70%;
-        margin-right: 80px;
+    .booking {
+        margin-top: 160px;
     }
 
-    .booking__contact {
-        width: 40%;
-        max-width: 40%;
-        margin-right: 80px;
+    .booking__row {
+        align-items: center;
+    }
+
+    .booking__content {
+        margin-left: auto;
+        margin-right: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .booking__form-wrapper {
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0;
     }
 
     .decor-cross {
+        top: 27%;
+        right: 0;
+        max-height: 350px;
+    }
+
+    .schedule {
+        margin-top: 100px;
     }
 
     .decor-a {
+    }
+
+    .decor-booking {
+        display: none;
     }
 
     .menu-card__inner {
@@ -80,11 +117,6 @@
     .hero__button {
         margin-top: 65px;
         padding: 10px 32px;
-    }
-
-    .main {
-        overflow: hidden;
-        position: relative;
     }
 
     .decor-main:first-of-type {
@@ -224,23 +256,6 @@
         padding: 40px 0;
     }
 
-    .booking__row {
-        align-items: center;
-    }
-
-    .booking__content {
-        margin-left: auto;
-        margin-right: 0;
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .booking__form-wrapper {
-        width: 100%;
-        max-width: 100%;
-        margin-right: 0;
-    }
-
     .booking__form-wrapper .section__title {
         margin-bottom: 40px;
     }
@@ -266,9 +281,6 @@
         font-size: 18px;
     }
 
-    .decor-booking {
-        display: none;
-    }
 
     .footer {
         min-height: auto;
