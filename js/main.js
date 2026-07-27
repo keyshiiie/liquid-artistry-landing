@@ -40,6 +40,7 @@ function parseCSV(csvText) {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
+    // в реальном проекте выносится в .evc но для работы статики пока тут
     const SHEET_URL = "https://docs.google.com/spreadsheets/d/1BNNVPh2yfbxnkxWNCzxkFxn7p4WsseD_hvXCsfvpUwc/export?format=csv";
 
     try {
