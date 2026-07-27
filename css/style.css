@@ -1,7 +1,3 @@
-/* ============================================
-   BASE STYLES
-   ============================================ */
-
 img {
     pointer-events: none;
     user-select: none;
@@ -23,9 +19,6 @@ body {
     margin: 0 auto;
 }
 
-/* ============================================
-   HERO SECTION
-   ============================================ */
 .main {
     position: relative;
     min-height: 100vh;
@@ -116,6 +109,17 @@ body {
     margin-bottom: 20px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 .hero__description {
     font-size: 20px;
     font-weight: 400;
@@ -140,9 +144,6 @@ body {
     color: #000000;
 }
 
-/* ============================================
-   ABOUT US
-   ============================================ */
 .about-us {
     background-color: #181818;
     padding: 80px 0;
@@ -201,9 +202,6 @@ body {
     pointer-events: none;
 }
 
-/* ============================================
-   GALLERY
-   ============================================ */
 .gallery {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -218,9 +216,6 @@ body {
     object-fit: cover;
 }
 
-/* ============================================
-   SCHEDULE
-   ============================================ */
 .schedule {
     background-color: #181818;
     padding: 80px 0;
@@ -279,9 +274,6 @@ body {
     color: #D16868;
 }
 
-/* ============================================
-   DECORATIONS
-   ============================================ */
 .decor-wrapper {
     position: relative;
 }
@@ -306,9 +298,6 @@ body {
     pointer-events: none;
 }
 
-/* ============================================
-   BOOKING
-   ============================================ */
 .booking {
     margin-top: 250px;
     background-color: #181818;
@@ -331,7 +320,6 @@ body {
     width: 100%;
 }
 
-/* Обертка для формы и контактов */
 .booking__content {
     margin-left: auto;
     margin-right: 120px;
@@ -372,14 +360,11 @@ body {
     font-weight: 400;
 }
 
-/* ============================================
-   FOOTER
-   ============================================ */
 .footer {
     position: relative;
-    padding: 30px 0; /* ← фиксированные отступы сверху/снизу */
+    padding: 30px 0; 
     z-index: 1;
-    overflow: hidden; /* чтобы фон не вылезал */
+    overflow: hidden;
 }
 
 .footer::before {
@@ -391,7 +376,7 @@ body {
     bottom: 0;
     background-image: url('../img/footer.png');
     background-size: cover;
-    background-position: center; /* ← центрируем фон */
+    background-position: center; 
     background-repeat: no-repeat;
     opacity: 0.7;
     z-index: -1;
@@ -443,7 +428,7 @@ body {
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
-    width: 100%; /* ← добавил, чтобы правильно растягивалось */
+    width: 100%;
     align-items: center;
 }
 

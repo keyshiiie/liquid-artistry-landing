@@ -1,5 +1,3 @@
-// js/modules/customPickers.js
-
 export class CustomPickers {
     constructor() {
         this.initDatePicker();
@@ -16,7 +14,6 @@ export class CustomPickers {
         let currentDate = new Date();
         let selectedDate = null;
         
-        // Toggle picker
         dateInput.addEventListener('click', () => {
             datePicker.style.display = datePicker.style.display === 'none' ? 'block' : 'none';
             if (datePicker.style.display === 'block') {
@@ -24,14 +21,12 @@ export class CustomPickers {
             }
         });
         
-        // Close picker on outside click
         document.addEventListener('click', (e) => {
             if (!dateWrapper.contains(e.target)) {
                 datePicker.style.display = 'none';
             }
         });
         
-        // Navigation
         datePicker.querySelector('[data-action="prev-month"]').addEventListener('click', () => {
             currentDate.setMonth(currentDate.getMonth() - 1);
             this.renderCalendar(currentDate, daysContainer, monthYearDisplay, selectedDate);
@@ -42,7 +37,6 @@ export class CustomPickers {
             this.renderCalendar(currentDate, daysContainer, monthYearDisplay, selectedDate);
         });
         
-        // Day selection (delegation)
         daysContainer.addEventListener('click', (e) => {
             const day = e.target.closest('.picker-day');
             if (!day || day.classList.contains('other-month')) return;
@@ -73,14 +67,12 @@ export class CustomPickers {
         
         let html = '';
         
-        // Previous month days
         const prevMonthLastDay = new Date(year, month, 0).getDate();
         for (let i = startDay - 1; i > 0; i--) {
             const day = prevMonthLastDay - i + 1;
             html += `<div class="picker-day other-month">${day}</div>`;
         }
         
-        // Current month days
         for (let i = 1; i <= daysInMonth; i++) {
             const isSelected = selected && 
                 selected.getDate() === i && 
@@ -99,19 +91,16 @@ export class CustomPickers {
         const timePicker = timeWrapper.querySelector('.custom-time-picker');
         const options = timePicker.querySelectorAll('.time-option');
         
-        // Toggle picker
         timeInput.addEventListener('click', () => {
             timePicker.style.display = timePicker.style.display === 'none' ? 'block' : 'none';
         });
         
-        // Close picker on outside click
         document.addEventListener('click', (e) => {
             if (!timeWrapper.contains(e.target)) {
                 timePicker.style.display = 'none';
             }
         });
         
-        // Time selection
         options.forEach(option => {
             option.addEventListener('click', () => {
                 options.forEach(opt => opt.classList.remove('selected'));

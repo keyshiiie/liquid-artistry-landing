@@ -1,5 +1,3 @@
-// js/modules/slider.js
-
 export class Slider {
     constructor(container, data = null) {
         this.container = container;

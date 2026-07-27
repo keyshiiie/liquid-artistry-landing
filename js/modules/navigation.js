@@ -29,7 +29,6 @@ export class Navigation {
         
         if (!burger || !overlay) return;
         
-        // Открытие/закрытие по клику на бургер
         burger.addEventListener('click', () => {
             const isActive = overlay.classList.contains('active');
             if (isActive) {
@@ -39,21 +38,18 @@ export class Navigation {
             }
         });
         
-        // Закрытие по клику на ссылку
         links.forEach(link => {
             link.addEventListener('click', () => {
                 this.closeMenu();
             });
         });
         
-        // Закрытие по клику на оверлей (только на пустое место)
         overlay.addEventListener('click', (e) => {
             if (e.target === overlay) {
                 this.closeMenu();
             }
         });
         
-        // Закрытие по Escape
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && overlay.classList.contains('active')) {
                 this.closeMenu();

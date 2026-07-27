@@ -15,12 +15,10 @@ export class Booking {
         const formData = new FormData(this.form);
         const data = Object.fromEntries(formData);
         
-        // Validate
         if (!this.validate(data)) {
             return;
         }
         
-        // Show loading state
         const submitBtn = this.form.querySelector('.booking__submit');
         const originalText = submitBtn.textContent;
         submitBtn.textContent = 'Sending...';
@@ -40,7 +38,6 @@ export class Booking {
     }
     
     validate(data) {
-        // Basic validation
         if (!data.name || data.name.length < 2) {
             alert('Please enter your name');
             return false;
@@ -65,8 +62,8 @@ export class Booking {
     }
     
     async sendToTelegram(data) {
-        const token = 'YOUR_BOT_TOKEN'; // Replace with your token
-        const chatId = 'YOUR_CHAT_ID'; // Replace with your chat ID
+        const token = 'YOUR_BOT_TOKEN';
+        const chatId = 'YOUR_CHAT_ID'; 
         
         const message = `
 🔔 New Booking!
@@ -98,10 +95,10 @@ export class Booking {
     }
     
     showSuccess() {
-        alert('✅ Booking submitted successfully! We will contact you shortly.');
+        alert('Booking submitted successfully! We will contact you shortly.');
     }
     
     showError() {
-        alert('❌ Something went wrong. Please try again or call us directly.');
+        alert('Something went wrong. Please try again or call us directly.');
     }
 }
