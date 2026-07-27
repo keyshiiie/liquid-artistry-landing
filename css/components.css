@@ -279,10 +279,10 @@
     font-weight: 900;
     text-transform: uppercase;
     cursor: pointer;
+    display: block;
+    width: 100%;
     transition: all 0.3s ease;
     margin-top: 35px;
-    width: 30%;
-    box-sizing: border-box;
 }
 
 .booking__submit:hover {

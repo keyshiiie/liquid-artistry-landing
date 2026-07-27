@@ -1,24 +1,19 @@
-// js/main.js
-
 import { Slider } from './modules/slider.js';
 import { Booking } from './modules/booking.js';
 import { Navigation } from './modules/navigation.js';
 import { CustomPickers } from './modules/customPickers.js';
 import { CustomSelect } from './modules/customSelect.js';
 
-// Функция для парсинга CSV
 function parseCSV(csvText) {
     const lines = csvText.split('\n').filter(line => line.trim());
     if (lines.length === 0) return [];
     
-    // Парсим заголовки
     const headers = lines[0].split(',').map(h => h.trim().replace(/^"|"$/g, ''));
     const result = [];
     
     for (let i = 1; i < lines.length; i++) {
         if (!lines[i].trim()) continue;
         
-        // Парсим значения с учетом кавычек
         const values = [];
         let currentValue = '';
         let inQuotes = false;
@@ -45,11 +40,10 @@ function parseCSV(csvText) {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
-    // Используем экспорт в CSV
     const SHEET_URL = "https://docs.google.com/spreadsheets/d/1BNNVPh2yfbxnkxWNCzxkFxn7p4WsseD_hvXCsfvpUwc/export?format=csv";
 
     try {
-        console.log('🔄 Загрузка данных из Google Sheets...');
+        console.log('Загрузка данных из Google Sheets...');
         const response = await fetch(SHEET_URL);
         
         if (!response.ok) {
@@ -57,27 +51,26 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
         
         const csvText = await response.text();
-        console.log('📊 CSV получен, длина:', csvText.length);
+        console.log('CSV получен, длина:', csvText.length);
         
         const menuData = parseCSV(csvText);
-        console.log('✅ Данные после парсинга:', menuData);
-        console.log('📊 Количество позиций:', menuData.length);
+        console.log('Данные после парсинга:', menuData);
+        console.log('Количество позиций:', menuData.length);
         
         if (menuData.length > 0) {
-            console.log('📋 Первая позиция:', menuData[0]);
+            console.log('Первая позиция:', menuData[0]);
         }
         
         const sliderContainer = document.querySelector('.menu');
         if (sliderContainer) {
             new Slider(sliderContainer, menuData);
         } else {
-            console.warn('⚠️ Контейнер слайдера не найден');
+            console.warn('Контейнер слайдера не найден');
         }
         
     } catch (error) {
-        console.error('❌ Ошибка загрузки меню:', error);
+        console.error('Ошибка загрузки меню:', error);
         
-        // Резервные данные
         const fallbackData = [
             {
                 id: '1',
@@ -115,18 +108,17 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         const sliderContainer = document.querySelector('.menu');
         if (sliderContainer) {
-            console.log('🔄 Используем резервные данные');
+            console.log('Используем резервные данные');
             new Slider(sliderContainer, fallbackData);
         }
     }
 
-    // Инициализация остальных компонентов
     try {
         new Booking('bookingForm');
         new Navigation();
         new CustomPickers();
         new CustomSelect();
     } catch (error) {
-        console.error('❌ Ошибка инициализации компонентов:', error);
+        console.error('Ошибка инициализации компонентов:', error);
     }
 });

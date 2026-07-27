@@ -21,7 +21,6 @@ body {
 .container {
     max-width: 1320px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
 /* ============================================
@@ -33,6 +32,7 @@ body {
     color: #ffffff;
     z-index: 1;
     position: relative;
+    overflow: hidden;
 }
 
 .decor-main:first-of-type {
@@ -293,7 +293,7 @@ body {
     transform: translate(0, -70%);
     z-index: 2;
     pointer-events: none;
-    max-width: 856px;
+    max-width: 100%;
     height: auto;
 }
 
